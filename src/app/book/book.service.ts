@@ -12,12 +12,12 @@ export class BookService{
 
     getAllBooks(): Observable<Response>{
         console.log("inside the service getAllBooks():::::::");
-        return this._httpService.get("http://localhost:8080/bookapi/book");
+        return this._httpService.get("http://localhost:8080/weaselapi/book");
     }
 
     getBookById(bookId: string): Observable<Response>{
         console.log("Inside the getBookById() service::::::");
-        return this._httpService.get("http://localhost:8080/bookapi/book/"+bookId);
+        return this._httpService.get("http://localhost:8080/weaselapi/book/"+bookId);
     }
 
     addBook(book: Book){
@@ -26,16 +26,16 @@ export class BookService{
         let options = new RequestOptions({ headers: headers });
         if(book.id){
             console.log("Inside addBook update service():::::::");
-            return this._httpService.put("http://localhost:8080/bookapi/book/"+book.id, body, options);
+            return this._httpService.put("http://localhost:8080/weaselapi/book/"+book.id, body, options);
         }else{
             console.log("Inside addBook add service():::::::");
-            return this._httpService.post("http://localhost:8080/bookapi/book", body, options);
+            return this._httpService.post("http://localhost:8080/weaselapi/book", body, options);
         }
     }
 
     deleteBook(bookId: string){
         console.log("Inside the service deleteBook():::::book id:::"+bookId);
-        return this._httpService.delete("http://localhost:8080/bookapi/book/"+bookId);
+        return this._httpService.delete("http://localhost:8080/weaselapi/book/"+bookId);
     }
 
     private handleError(error: Response){

@@ -1,13 +1,13 @@
-# Book App
+# Weasel List Client
 
-Build a Simple Angular 2 CRUD application using http
+Install Weasel list client for development
 
 ## Steps to Setup
 
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/scbushan05/angular-2-crud.git
+git clone https://github.com/Alkon23/WeaselListClient.git
 ```
 
 **2. Intall Angular CLI globally**
@@ -16,19 +16,17 @@ git clone https://github.com/scbushan05/angular-2-crud.git
 npm install -g @angular/cli
 ```
 
-**3. Intall dependencies/npm modules**
+(Node.JS required)
+
+**3. Install dependencies/npm modules**
 
 Go to the project directory and execute the following command from the terminal
 
 ```bash
-intall npm
+npm install
 ```
 
-**4. Change the REST API URL's**
-
-In the book.service.ts change the REST API URL's, i have created backend project using Spring REST, you can find it here <https://github.com/scbushan05/book-api>
-
-**5. Build and run the app**
+**4. Build and run the app**
 
 ```bash
 ng serve --open

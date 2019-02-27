@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "book-app": {
+    "weasel-list": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -48,18 +48,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "book-app:build"
+            "browserTarget": "weasel-list:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "book-app:build:production"
+              "browserTarget": "weasel-list:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "book-app:build"
+            "browserTarget": "weasel-list:build"
           }
         },
         "test": {
@@ -93,7 +93,7 @@
         }
       }
     },
-    "book-app-e2e": {
+    "weasel-list-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -102,7 +102,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "book-app:serve"
+            "devServerTarget": "weasel-list:serve"
           }
         },
         "lint": {
@@ -119,7 +119,7 @@
       }
     }
   },
-  "defaultProject": "book-app",
+  "defaultProject": "weasel-list",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
