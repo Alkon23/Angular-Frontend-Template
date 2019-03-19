@@ -6,29 +6,29 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { BookService } from './book/book.service';
-import { BookComponent } from './book/book.component';
-import { BookListComponent } from './book/bookList.component';
+import { UserService } from './user/user.service';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user/userList.component';
 import { PageNotFoundComponent } from './others/pageNotFound.component';
-import { HomeComponent } from './book/home.component';
+import { HomeComponent } from './user/home.component';
 
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'books', component: BookListComponent },
-  { path: 'addBook', component: BookComponent },
+  { path: 'users', component: UserListComponent },
+  { path: 'addUser', component: UserComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   declarations: [
-    AppComponent, BookComponent, BookListComponent, HomeComponent, PageNotFoundComponent
+    AppComponent, UserComponent, UserListComponent, HomeComponent, PageNotFoundComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,  RouterModule.forRoot(appRoutes)
   ],
-  providers: [BookService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

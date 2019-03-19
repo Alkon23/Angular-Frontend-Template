@@ -1,0 +1,27 @@
+<div class = "container">
+    <table class = "table table-striped table-bordered">
+        <tr style = "background: lightblue;">
+            <th>ID</th>
+            <th>NICK</th>
+            <th>PASSWORD</th>
+            <th>EMAIL</th>
+            <th>TAGS</th>
+            <th>LISTS</th>
+        </tr>
+        <tr *ngFor = "let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.nick}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.tags}}</td>
+            <td>{{user.lists}}</td>
+        </tr>
+        <tr *ngIf = "!users">
+            <td colspan = "3">Loading... Please wait....</td>
+        </tr>
+        <tr *ngIf = "users && users.length == 0">
+            <td colspan = "3">No records found!</td>
+        </tr>
+
+    </table>
+</div>
