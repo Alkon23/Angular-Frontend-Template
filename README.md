@@ -7,7 +7,7 @@ Install Weasel list client for development
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/Alkon23/WeaselListClient.git
+git clone https://github.com/Alkon23/Angular-Frontend-Template.git
 ```
 
 **2. Intall Angular CLI globally**
